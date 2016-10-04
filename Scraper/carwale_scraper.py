@@ -31,8 +31,12 @@ def get_cars():
 			detail_list = []
 			detail_list.append(car_name)
 			#detail_list.append(href)
-			detail_list.append(car_avg_price(href))
-			full_list.append(detail_list)
+			price = car_avg_price(href)
+			if price != None:
+				detail_list.append(car_avg_price(href))
+				full_list.append(detail_list)
+			else:
+				print("Price not found !")
 
 def car_avg_price(car_url):
 	src = requests.get(car_url)

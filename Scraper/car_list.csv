@@ -1,16 +1,14 @@
 CAR NAME,AVG. ON-ROAD PRICE
 Audi A3,3627000
-Audi Q3,4324000
-Audi A4,4176000
+Audi Q3,4323000
+Audi A4,4178000
 Audi A3 Cabriolet,4844000
 Audi Q5,5677000
-Audi A6,5311000
+Audi A6,5296000
 Audi TT,6487000
 Audi S5 Sportback,6783000
-Audi Q7,8134000
+Audi Q7,8133000
 Audi A8 L,14700000
-Audi RS6,
-Audi RS7 Sportback,
 Audi R8,26100000
 BMW X1,4122000
 BMW 1 Series,3046000
@@ -23,20 +21,19 @@ BMW Z4,7734999
 BMW 7 Series,15500000
 BMW 6 Series,12200000
 BMW X6,12100000
-BMW 4 Series,
 BMW i8,22200000
 Chevrolet Spark,430000
 Chevrolet Beat,671000
 Chevrolet Sail Hatchback,761000
 Chevrolet Sail,861999
-Chevrolet Enjoy,935000
+Chevrolet Enjoy,933000
 Chevrolet Tavera,1129000
 Chevrolet Cruze,1777000
 Chevrolet Trailblazer,2753000
 Datsun Redi-GO,352000
 Datsun GO,426000
 Datsun GO Plus,501000
-Fiat Punto Pure,589000
+Fiat Punto Pure,588000
 Fiat Punto Evo,806000
 Fiat Linea Classic,822000
 Fiat Avventura,1055000
@@ -50,7 +47,7 @@ Ford Aspire,832000
 Ford EcoSport,1015000
 Ford Endeavour,3023000
 Ford Mustang,6588000
-Honda Brio,717000
+Honda Brio,687000
 Honda Amaze,858000
 Honda Jazz,910000
 Honda Mobilio,1261000
@@ -67,27 +64,27 @@ Hyundai Verna,1332000
 Hyundai Creta,1464000
 Hyundai Elantra,1960000
 Hyundai Santa Fe,3227000
-Jaguar XE,4895000
-Jaguar XF,6313000
-Jaguar XJ L,20000000
+Jaguar XE,4904000
+Jaguar XF,6334000
+Jaguar XJ L,20400000
 Jaguar F-Type,18600000
 Land Rover Discovery Sport,6452000
 Land Rover Range Rover Evoque,6476000
 Land Rover Discovery,11399999
-Land Rover Range Rover Sport,17900000
+Land Rover Range Rover Sport,18000000
 Land Rover Range Rover,40599999
 Mahindra KUV100,721000
-Mahindra Thar,882000
+Mahindra Thar,883000
 Mahindra e2o,739000
 Mahindra Verito Vibe CS,718000
-Mahindra Bolero,814000
+Mahindra Bolero,816000
 Mahindra Verito,1194000
 Mahindra TUV300,994000
 Mahindra NuvoSport,1009000
 Mahindra Xylo,1112000
-Mahindra Scorpio Getaway,968000
-Mahindra Scorpio,1511000
-Mahindra XUV500,1830000
+Mahindra Scorpio Getaway,969000
+Mahindra Scorpio,1512000
+Mahindra XUV500,1832000
 Maruti Suzuki Alto 800,388000
 Maruti Suzuki Omni,280000
 Maruti Suzuki Alto K10,429000
@@ -110,7 +107,7 @@ Mercedes-Benz CLA,7170000
 Mercedes-Benz GLA,7419000
 Mercedes-Benz C-Class,13400000
 Mercedes-Benz E-Class,13000000
-Mercedes-Benz GLC,5307000
+Mercedes-Benz GLC,5460000
 Mercedes-Benz GLE,7712000
 Mercedes-Benz CLS,7793000
 Mercedes-Benz SLC,7951000
@@ -134,7 +131,7 @@ Renault Lodgy,1283000
 Renault Scala,959000
 Renault Duster,1387000
 Renault Fluence,1661000
-Renault Koleos,2828000
+Renault Koleos,2827000
 Skoda Rapid,1244000
 Skoda Octavia,2292000
 Skoda Yeti,2356000
@@ -161,8 +158,7 @@ Toyota Corolla Altis,1885000
 Toyota Fortuner,2835000
 Toyota Camry,3344000
 Toyota Land Cruiser Prado,9362000
-Toyota Land Cruiser,
-Volkswagen Ameo,933000
+Volkswagen Ameo,938000
 Volkswagen Polo,917000
 Volkswagen Cross Polo,911999
 Volkswagen Vento,1271000
