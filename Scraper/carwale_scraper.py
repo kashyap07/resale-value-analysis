@@ -18,6 +18,7 @@ while cc < companies:
 	cc = cc + 1
 
 full_list = []
+
 def get_cars():
 	for the_url in all_url:
 		src = requests.get(the_url)
@@ -25,34 +26,41 @@ def get_cars():
 		for link in soup.findAll('a', {'class': 'font18'}):
 			href = str('http://www.carwale.com' + link.get('href'))
 			car_name = str(link.string)
-			print(car_name)
-			#print(href)
-
 			detail_list = []
-			detail_list.append(car_name)
-			#detail_list.append(href)
-			price = car_avg_price(href)
-			if price != None:
-				detail_list.append(car_avg_price(href))
+			detail_list = car_detail(href)
+			if detail_list[2] != -1:
 				full_list.append(detail_list)
+				print('added ' + detail_list[0] + ' ' + detail_list[1])
 			else:
-				print("Price not found !")
+				print('price not found for ' + detail_list[0] + ' ' + detail_list[1])
 
-def car_avg_price(car_url):
+
+def car_detail(car_url):	# returns a list
+	details = []
 	src = requests.get(car_url)
 	soup = BeautifulSoup(src.text, 'lxml')
-	for car in soup.findAll('span', {'class': 'text-bold'})[-6:-5]:
-		car_str = str(car.text)
-		car_str = car_str[46:-43]
-		# lot of trial-error
-		# use cost of top-end model as avg. on-road value
-		# seems-legit
-		if(car_str[-1:] == 'C'):	# special case of crore
-			car_str = car_str[:-1]
-			price = int(10000000 * float(car_str))
-		else:
-			price = int(100000 * float(car_str))
-		return price
+
+	span_found = soup.findAll('span', {'itemprop': 'title'})
+	comp_str = span_found[1].text
+	car_str = str(span_found[2].text)[1:]
+	details.extend([comp_str, car_str])
+	try:
+		price_str = ((str((soup.findAll('span', {'class': 'text-bold'})[-6:-5])[0].text)).replace(' ', '').replace('\n', '').replace('\r', ''))[:-1]
+		# ex showroom price of top end model is at [-6:-5]
+		# [0] since findAll returns a list
+		# try-except sine some dont have values
+	except:
+		details.append(-1)
+		# will remove the list out later
+		return details
+	if price_str[-1] == 'C':
+		price_str = price_str[:-1]
+		price = int(10000000 * float(price_str))
+	else:
+		price = int(100000 * float(price_str))
+	details.append(price)
+
+	return details
 
 
 if __name__ == '__main__':

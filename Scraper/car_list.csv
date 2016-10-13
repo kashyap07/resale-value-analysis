@@ -1,172 +1,173 @@
 CAR NAME,AVG. ON-ROAD PRICE
-Audi A3,3627000
-Audi Q3,4323000
-Audi A4,4178000
-Audi A3 Cabriolet,4844000
-Audi Q5,5677000
-Audi A6,5296000
-Audi TT,6487000
-Audi S5 Sportback,6783000
-Audi Q7,8133000
-Audi A8 L,14700000
-Audi R8,26100000
-BMW X1,4122000
-BMW 1 Series,3046000
-BMW 3 Series,12500000
-BMW 3 Series GT,4574000
-BMW X3,6121000
-BMW 5 Series,13600000
-BMW X5,15500000
-BMW Z4,7734999
-BMW 7 Series,15500000
-BMW 6 Series,12200000
-BMW X6,12100000
-BMW i8,22200000
-Chevrolet Spark,430000
-Chevrolet Beat,671000
-Chevrolet Sail Hatchback,761000
-Chevrolet Sail,861999
-Chevrolet Enjoy,933000
-Chevrolet Tavera,1129000
-Chevrolet Cruze,1777000
-Chevrolet Trailblazer,2753000
-Datsun Redi-GO,352000
-Datsun GO,426000
-Datsun GO Plus,501000
-Fiat Punto Pure,588000
-Fiat Punto Evo,806000
-Fiat Linea Classic,822000
-Fiat Avventura,1055000
-Fiat Linea,1097000
-Fiat Abarth Punto,1044000
-Fiat Abarth 595,2672000
-Force Motors Gurkha,865000
-Force Motors Force One,1426000
-Ford Figo,740000
-Ford Aspire,832000
-Ford EcoSport,1015000
-Ford Endeavour,3023000
-Ford Mustang,6588000
-Honda Brio,687000
-Honda Amaze,858000
-Honda Jazz,910000
-Honda Mobilio,1261000
-Honda City,1276000
-Honda BR-V,1325000
-Honda CR-V,2676000
-Hyundai Eon,458000
-Hyundai i10,522000
-Hyundai Grand i10,707000
-Hyundai Xcent,815000
-Hyundai Elite i20,917000
-Hyundai i20 Active,986000
-Hyundai Verna,1332000
-Hyundai Creta,1464000
-Hyundai Elantra,1960000
-Hyundai Santa Fe,3227000
-Jaguar XE,4904000
-Jaguar XF,6334000
-Jaguar XJ L,20400000
-Jaguar F-Type,18600000
-Land Rover Discovery Sport,6452000
-Land Rover Range Rover Evoque,6476000
-Land Rover Discovery,11399999
-Land Rover Range Rover Sport,18000000
-Land Rover Range Rover,40599999
-Mahindra KUV100,721000
-Mahindra Thar,883000
-Mahindra e2o,739000
-Mahindra Verito Vibe CS,718000
-Mahindra Bolero,816000
-Mahindra Verito,1194000
-Mahindra TUV300,994000
-Mahindra NuvoSport,1009000
-Mahindra Xylo,1112000
-Mahindra Scorpio Getaway,969000
-Mahindra Scorpio,1512000
-Mahindra XUV500,1832000
-Maruti Suzuki Alto 800,388000
-Maruti Suzuki Omni,280000
-Maruti Suzuki Alto K10,429000
-Maruti Suzuki Eeco,445000
-Maruti Suzuki Celerio,604000
-Maruti Suzuki Wagon R 1.0,531000
-Maruti Suzuki Ritz,675000
-Maruti Suzuki Stingray,552000
-Maruti Suzuki Swift,758000
-Maruti Suzuki Baleno,852999
-Maruti Suzuki Swift Dzire,869000
-Maruti Suzuki Gypsy,654000
-Maruti Suzuki Ertiga,963000
-Maruti Suzuki Vitara Brezza,990000
-Maruti Suzuki Ciaz,1073000
-Maruti Suzuki S-Cross,1271000
-Mercedes-Benz A-Class,2876000
-Mercedes-Benz B-Class,8458000
-Mercedes-Benz CLA,7170000
-Mercedes-Benz GLA,7419000
-Mercedes-Benz C-Class,13400000
-Mercedes-Benz E-Class,13000000
-Mercedes-Benz GLC,5460000
-Mercedes-Benz GLE,7712000
-Mercedes-Benz CLS,7793000
-Mercedes-Benz SLC,7951000
-Mercedes-Benz E-Class Cabriolet,8105000
-Mercedes-Benz GLS,8601000
-Mercedes-Benz GLE Coupe,9114000
-Mercedes-Benz S-Class,91400000
-Mercedes-Benz S-Coupe,26300000
-Mercedes-Benz G-Class,20500000
-Mercedes-Benz AMG GT,22900000
-Mercedes-Benz M-Class,25500000
-Mitsubishi Pajero Sport,2836000
-Mitsubishi Montero,6868000
-Nissan Micra Active,534000
-Nissan Micra,709000
-Nissan Sunny,1109000
-Nissan Terrano,1351000
-Renault Kwid,409999
-Renault Pulse,707000
-Renault Lodgy,1283000
-Renault Scala,959000
-Renault Duster,1387000
-Renault Fluence,1661000
-Renault Koleos,2827000
-Skoda Rapid,1244000
-Skoda Octavia,2292000
-Skoda Yeti,2356000
-Skoda Superb,3162000
-Tata Nano GenX,323000
-Tata Nano,264000
-Tata Tiago,582000
-Tata Bolt,740000
-Tata Indica V2,515000
-Tata Venture,593000
-Tata Indica eV2,549000
-Tata Zest,869999
-Tata Indigo eCS,646000
-Tata Sumo Gold,853999
-Tata Safari,1087000
-Tata Xenon XT,1121000
-Tata Safari Storme,1551000
-Tata Aria,1652000
-Toyota Etios Liva,761000
-Toyota Etios Cross,817000
-Toyota Platinum Etios,909000
-Toyota Innova Crysta,2122000
-Toyota Corolla Altis,1885000
-Toyota Fortuner,2835000
-Toyota Camry,3344000
-Toyota Land Cruiser Prado,9362000
-Volkswagen Ameo,938000
-Volkswagen Polo,917000
-Volkswagen Cross Polo,911999
-Volkswagen Vento,1271000
-Volkswagen Jetta,2105000
-Volkswagen Beetle,3080000
-Volvo V40,2998000
-Volvo V40 Cross Country,3400000
-Volvo S60,4498000
-Volvo S80,5064000
-Volvo XC60,5672000
-Volvo XC90,12600000
+Audi,A3,3632000
+Audi,Q3,4306000
+Audi,A4,4181000
+Audi,A3 Cabriolet,4848000
+Audi,Q5,5678000
+Audi,A6,5351000
+Audi,TT,6503000
+Audi,S5 Sportback,6780000
+Audi,Q7,8145999
+Audi,A8 L,14700000
+Audi,R8,26100000
+BMW,X1,4122999
+BMW,1 Series,3046000
+BMW,3 Series,12500000
+BMW,3 Series GT,4575000
+BMW,X3,6122000
+BMW,5 Series,13600000
+BMW,X5,15500000
+BMW,Z4,7736000
+BMW,7 Series,15500000
+BMW,6 Series,12200000
+BMW,X6,12100000
+BMW,i8,22300000
+Chevrolet,Spark,430000
+Chevrolet,Beat,672000
+Chevrolet,Sail Hatchback,762000
+Chevrolet,Sail,861999
+Chevrolet,Enjoy,903999
+Chevrolet,Tavera,1131000
+Chevrolet,Cruze,1779000
+Chevrolet,Trailblazer,2753000
+Datsun,Redi-GO,356000
+Datsun,GO,426000
+Datsun,GO Plus,501000
+Fiat,Punto Pure,589000
+Fiat,Punto Evo,809000
+Fiat,Linea Classic,822000
+Fiat,Avventura,1066000
+Fiat,Linea,1097000
+Fiat,Abarth Punto,1044000
+Fiat,Abarth 595,3023000
+Force Motors,Gurkha,865000
+Force Motors,Force One,1426000
+Ford,Figo,740000
+Ford,Aspire,832000
+Ford,EcoSport,1015000
+Ford,Endeavour,3029000
+Ford,Mustang,6588000
+Honda,Brio,694000
+Honda,Amaze,858000
+Honda,Jazz,910000
+Honda,Mobilio,1261000
+Honda,City,1276000
+Honda,BR-V,1325000
+Honda,CR-V,2676000
+Hyundai,Eon,458000
+Hyundai,i10,522000
+Hyundai,Grand i10,707000
+Hyundai,Xcent,815000
+Hyundai,Elite i20,917000
+Hyundai,i20 Active,986000
+Hyundai,Verna,1332000
+Hyundai,Creta,1464000
+Hyundai,Elantra,1959000
+Hyundai,Santa Fe,3227000
+Jaguar,XE,4910000
+Jaguar,XF,6332000
+Jaguar,F-Pace,11299999
+Jaguar,XJ L,20400000
+Jaguar,F-Type,19100000
+Land Rover,Discovery Sport,6495000
+Land Rover,Range Rover Evoque,6662000
+Land Rover,Discovery,11399999
+Land Rover,Range Rover Sport,18000000
+Land Rover,Range Rover,39700000
+Mahindra,KUV100,721000
+Mahindra,Thar,883000
+Mahindra,e2o,739000
+Mahindra,Verito Vibe CS,719000
+Mahindra,Bolero,816000
+Mahindra,Verito,1194000
+Mahindra,TUV300,994000
+Mahindra,NuvoSport,1010000
+Mahindra,Xylo,1112000
+Mahindra,Scorpio Getaway,969999
+Mahindra,Scorpio,1512000
+Mahindra,XUV500,1832999
+Maruti Suzuki,Alto 800,388000
+Maruti Suzuki,Omni,280000
+Maruti Suzuki,Alto K10,429000
+Maruti Suzuki,Eeco,445000
+Maruti Suzuki,Celerio,604000
+Maruti Suzuki,Wagon R 1.0,531000
+Maruti Suzuki,Ritz,675000
+Maruti Suzuki,Stingray,552000
+Maruti Suzuki,Swift,758000
+Maruti Suzuki,Baleno,852999
+Maruti Suzuki,Swift Dzire,869000
+Maruti Suzuki,Gypsy,654000
+Maruti Suzuki,Ertiga,963000
+Maruti Suzuki,Vitara Brezza,990000
+Maruti Suzuki,Ciaz,1073000
+Maruti Suzuki,S-Cross,1271000
+Mercedes-Benz,A-Class,2878000
+Mercedes-Benz,B-Class,8259999
+Mercedes-Benz,CLA,7170000
+Mercedes-Benz,GLA,7419000
+Mercedes-Benz,C-Class,13400000
+Mercedes-Benz,E-Class,13000000
+Mercedes-Benz,GLC,5468000
+Mercedes-Benz,GLE,7684000
+Mercedes-Benz,CLS,7793000
+Mercedes-Benz,SLC,7948000
+Mercedes-Benz,E-Class Cabriolet,8106000
+Mercedes-Benz,GLS,8575000
+Mercedes-Benz,GLE Coupe,9116000
+Mercedes-Benz,S-Class,91400000
+Mercedes-Benz,S-Coupe,26400000
+Mercedes-Benz,G-Class,20500000
+Mercedes-Benz,AMG GT,22900000
+Mercedes-Benz,M-Class,25500000
+Mitsubishi,Pajero Sport,2837000
+Mitsubishi,Montero,6848999
+Nissan,Micra Active,534000
+Nissan,Micra,709000
+Nissan,Sunny,1110000
+Nissan,Terrano,1350000
+Renault,Kwid,409999
+Renault,Pulse,706000
+Renault,Lodgy,1283000
+Renault,Scala,958000
+Renault,Duster,1404000
+Renault,Fluence,1661000
+Renault,Koleos,2827000
+Skoda,Rapid,1248000
+Skoda,Octavia,2300000
+Skoda,Yeti,2359000
+Skoda,Superb,3165000
+Tata,Nano GenX,323000
+Tata,Nano,264000
+Tata,Tiago,583000
+Tata,Bolt,740000
+Tata,Indica V2,516000
+Tata,Venture,593000
+Tata,Indica eV2,549000
+Tata,Zest,869999
+Tata,Indigo eCS,646000
+Tata,Sumo Gold,855000
+Tata,Safari,1087000
+Tata,Xenon XT,1121000
+Tata,Safari Storme,1552000
+Tata,Aria,1657000
+Toyota,Etios Liva,761000
+Toyota,Etios Cross,817000
+Toyota,Platinum Etios,910000
+Toyota,Innova Crysta,2122000
+Toyota,Corolla Altis,1885000
+Toyota,Fortuner,2836000
+Toyota,Camry,3345000
+Toyota,Land Cruiser Prado,9361000
+Volkswagen,Ameo,955000
+Volkswagen,Polo,917000
+Volkswagen,Cross Polo,911999
+Volkswagen,Vento,1271000
+Volkswagen,Jetta,2106000
+Volkswagen,Beetle,3075000
+Volvo,V40,2998000
+Volvo,V40 Cross Country,3400000
+Volvo,S60,4498000
+Volvo,S80,5000000
+Volvo,XC60,5568000
+Volvo,XC90,12600000
