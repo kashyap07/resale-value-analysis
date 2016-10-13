@@ -70,7 +70,7 @@ if __name__ == '__main__':
 
 	outfile = open('./car_list.csv', 'w')
 	writer = csv.writer(outfile)
-	writer.writerow(['CAR NAME', 'AVG. ON-ROAD PRICE'])
+	writer.writerow(['COMPANY NAME', 'CAR NAME', 'AVG. ON-ROAD PRICE'])
 	writer.writerows(full_list)
 
 	print('\nDONE !')
