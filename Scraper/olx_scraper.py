@@ -1,40 +1,49 @@
 #! /usr/bin/python3
-#DA project
+# DA project
 
 import csv
 import os
-import requests
+import threading
 from bs4 import BeautifulSoup
 
-url_str = 'https://www.olx.in/cars/?search%5Bfilter_float_year%3Afrom%5D=2014'
+cities = ['ahmedabad', 'bangalore', 'chandigarhcity', 'chennai', 'coimbatore', 'gurgaon', 'hyderabad', 'jaipur', 'kochi', 'kolkata', 'lucknow', 'ludhiana', 'mumbai', 'newdelhi', 'pune', 'thiruvananthapuram']
 
-#total_pages = 391
-total_pages = 3
-current_page = 0
-all_url = []
-while current_page < total_pages:
-	all_url.append(url_str + '&page=' + '2')
-	current_page = current_page + 1
-# todo
+base1 = 'https://www.olx.in/'
+base2 = '/cars/?search%5Bfilter_float_year%3Afrom%5D=2010'
 
-full_list = []
-def get_cars():
-	for page_url in all_url:	
+city_url = []
+for city in cities:
+	u = base1 + city + base2
+	city_url.append(u)
+
+def create_urls(url, soup):
+	pg = soup.findAll('a', {'class': 'block br3 brc8 large tdnone lheight24'})
+	total_pages = int(pg[-1].text.replace('\r', '').replace('\n', '').replace(' ', ''))
+	current_page = 2
+	all_url = []
+	while current_page <= total_pages:
+		all_url.append(url + '&page=' + str(current_page))
+		current_page = current_page + 1
+	return all_url
+
+def get_car_link_list():
+	for page_url in city_url:
 		src = requests.get(page_url)
 		soup = BeautifulSoup(src.text, 'lxml')
-		for link in (soup.findAll('a', {'class': 'marginright5 link linkWithHash detailsLink'})):
-			car_url = link.get('href')
-			car_name = link.find('span').text
-			url_list = []
-			url_list.append(car_name)
-			url_list.append(car_url)
-			# also include manufacturer name while entering individual car
-			full_list.append(url_list)
+		for url in create_urls(page_url, soup):
+			pg_src = requests.get(url)
+			pg_soup = BeautifulSoup(pg_src.text, 'lxml')
+			for link in pg_soup.findAll('a', {'class': 'marginright5 link linkWithHash detailsLink'}):
+				car_url = link.get('href')
+				car_str = link.find('span').text
+				url_list = []
+				url_list.append(car_str)
+				url_list.append(car_url)
+				print(url_list)
+				#full_list.append(url_list)
+
 
 if __name__ == '__main__':
-	get_cars()
+	get_car_link_list()
 
-	outfile = open('./olx_car_list.csv', 'w')
-	writer = csv.writer(outfile)
-	writer.writerow(['TITLE', 'URL'])
-	writer.writerows(full_list)
+	print('\nDONE !')
