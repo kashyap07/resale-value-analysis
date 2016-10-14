@@ -7,7 +7,8 @@ import requests
 import threading
 from bs4 import BeautifulSoup
 
-cities = ['ahmedabad', 'bangalore', 'chandigarhcity', 'chennai', 'coimbatore', 'gurgaon', 'hyderabad', 'jaipur', 'kochi', 'kolkata', 'lucknow', 'ludhiana', 'mumbai', 'newdelhi', 'pune', 'thiruvananthapuram']
+#cities = ['ahmedabad', 'bangalore', 'chandigarhcity', 'chennai', 'coimbatore', 'gurgaon', 'hyderabad', 'jaipur', 'kochi', 'kolkata', 'lucknow', 'ludhiana', 'mumbai', 'newdelhi', 'pune', 'thiruvananthapuram']
+cities = ['bangalore']
 
 base1 = 'https://www.olx.in/'
 base2 = '/cars/?search%5Bfilter_float_year%3Afrom%5D=2010'
@@ -20,7 +21,8 @@ for city in cities:
 
 def create_urls(url, soup):
 	pg = soup.findAll('a', {'class': 'block br3 brc8 large tdnone lheight24'})
-	total_pages = int(pg[-1].text.replace('\r', '').replace('\n', '').replace(' ', ''))
+	#total_pages = int(pg[-1].text.replace('\r', '').replace('\n', '').replace(' ', ''))
+	total_pages = 2
 	current_page = 2
 	all_url = []
 	while current_page <= total_pages:
@@ -43,7 +45,8 @@ def get_car_link_list():
 				indiv_list.extend(get_details(car_url))
 				
 				print(indiv_list)
-				full_list.append(indiv_list)
+				if indiv_list[1] != -1:
+					full_list.append(indiv_list)
 
 def get_details(url):
 	src = requests.get(url)
