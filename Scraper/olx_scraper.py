@@ -3,6 +3,7 @@
 
 import csv
 import os
+import requests
 import threading
 from bs4 import BeautifulSoup
 
@@ -12,6 +13,7 @@ base1 = 'https://www.olx.in/'
 base2 = '/cars/?search%5Bfilter_float_year%3Afrom%5D=2010'
 
 city_url = []
+full_list = []
 for city in cities:
 	u = base1 + city + base2
 	city_url.append(u)
@@ -36,14 +38,38 @@ def get_car_link_list():
 			for link in pg_soup.findAll('a', {'class': 'marginright5 link linkWithHash detailsLink'}):
 				car_url = link.get('href')
 				car_str = link.find('span').text
-				url_list = []
-				url_list.append(car_str)
-				url_list.append(car_url)
-				print(url_list)
-				#full_list.append(url_list)
+				indiv_list = []
+				indiv_list.append(car_str)
+				indiv_list.extend(get_details(car_url))
+				
+				print(indiv_list)
+				full_list.append(indiv_list)
+
+def get_details(url):
+	src = requests.get(url)
+	soup = BeautifulSoup(src.text, 'lxml')
+	detail_list = []
+	city = soup.findAll('a', {'class': 'link nowrap'})[0].text[5:]
+	found = soup.findAll('strong', {'class': 'block'})
+	company = found[0].text.strip()
+	model = found[1].text.strip()
+	year = found[2].text.strip()
+	fuel = found[3].text.strip()
+	driven = found[4].text.replace('km', '').replace(',', '').strip()
+	price = soup.find('strong', {'class': 'xxxx-large margintop7 inlblk not-arranged'}).text
+	detail_list.extend([city, company, model, year, fuel, driven, price])
+	if detail_list[1] == 'Other Brands' or detail_list[2] == 'Others':
+		detail_list = [-1]
+	return detail_list
+	
 
 
 if __name__ == '__main__':
 	get_car_link_list()
+
+	outfile = open('./olx_list.csv', 'w')
+	writer = csv.writer(outfile)
+	writer.writerow(['DESCRIPTION', 'LOCATION', 'MANUFACTURER', 'MODEL', 'YEAR', 'FUEL', 'KMS DRIVEN', 'PRICE'])
+	writer.writerows(full_list)
 
 	print('\nDONE !')
