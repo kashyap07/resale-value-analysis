@@ -1,79 +1,76 @@
 #! /usr/bin/python3
 # DA project
 
+# ctrl-c to stop looping
+
 import time
-import csv
-import os
-import requests
-from bs4 import BeautifulSoup
+import re
+from datetime import datetime
+from selenium import webdriver
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
-cities = ['bangalore', 'chennai', 'hyderabad', 'kolkata', 'mumbai', 'newdelhi']
+ffox = FirefoxBinary('/home/kashyap/my_programs/firefox45/firefox')
+browser = webdriver.Firefox(firefox_binary=ffox)
+browser.maximize_window()
 
-base1 = 'https://www.olx.in/'
-base2 = '/cars/?search%5Bfilter_float_year%3Afrom%5D=2010'
+# test url
+url1 = 'http://www.carwale.com/marutisuzuki-cars/'
 
-city_url = []
-full_list = []
-for city in cities:
-	u = base1 + city + base2
-	city_url.append(u)
+cities = ['Bangalore', 'Chennai', 'Hyderabad', 'Kolkata', 'Mumbai (Central)', 'Delhi (Central)']
+car_info = []
 
-def create_urls(url, soup):
-	pg = soup.findAll('a', {'class': 'block br3 brc8 large tdnone lheight24'})
-	total_pages = int(pg[-1].text.replace('\r', '').replace('\n', '').replace(' ', ''))
-	current_page = 2
-	all_url = []
-	while current_page <= total_pages:
-		all_url.append(url + '&page=' + str(current_page))
-		current_page = current_page + 1
-	return all_url
+# TODO: function to generqate urls of all companies
+#		and get back to previous car
+#		csv
 
-def get_car_link_list():
-	for page_url in city_url:
-		src = requests.get(page_url)
-		soup = BeautifulSoup(src.text, 'lxml')
-		for url in create_urls(page_url, soup):
-			pg_src = requests.get(url)
-			pg_soup = BeautifulSoup(pg_src.text, 'lxml')
-			for link in pg_soup.findAll('a', {'class': 'marginright5 link linkWithHash detailsLink'}):
-				car_url = link.get('href')
-				car_str = link.find('span').text
-				indiv_list = []
-				indiv_list.append(car_str)
-				indiv_list.extend(get_details(car_url))
-				
-				if indiv_list[1] != -1:
-					print(indiv_list)
-					full_list.append(indiv_list)
 
-def get_details(url):
+def __get_info():
+	global browser
+	indiv_l = []
+	browser.execute_script("window.scrollTo(0, 0)")
+	time.sleep(1)
+	name = browser.find_element_by_id('pq-jcarousel').text
+	price = browser.find_elements_by_css_selector('b')[1].text.replace(',', '')
+	location = browser.find_elements_by_class_name('tblDefault')[1].text[15:31].replace(')', '').replace('(', '').replace(',', '').replace(' ', '').replace('Central', '')
+	location = re.sub('\d+', '', location)
+	indiv_l.append(name)
+	indiv_l.append(location)
+	indiv_l.append(price)
+	print(indiv_l)
+	return indiv_l
+
+def __create_list(url):
+	global browser
+	browser.get(url)
 	try:
-		src = requests.get(url)
-		soup = BeautifulSoup(src.text, 'lxml')
-		detail_list = []
-		city = soup.findAll('a', {'class': 'link'})[0].text.strip()[4:]
-		found = soup.findAll('strong', {'class': 'block'})
-		company = found[0].text.strip()
-		model = found[1].text.strip()
-		year = found[2].text.strip()
-		fuel = found[3].text.strip()
-		driven = found[4].text.replace('km', '').replace(',', '').strip()
-		price = soup.find('strong', {'class': 'xxxx-large margintop7 inlblk not-arranged'}).text
-		detail_list.extend([city, company, model, year, fuel, driven, price])
-		if detail_list[1] == 'Other Brands' or detail_list[2] == 'Others' or detail_list[4] == 'Google Play' or detail_list[5] == 'Google Play':
-			detail_list = [-1]
+		no_btn = browser.find_element_by_id('btnYes')
+		no_btn.click()
 	except:
-		detail_list = [-1]
-	return detail_list
-	
+		pass
+
+	time.sleep(1)
+	el = browser.find_element_by_css_selector('a#btnChkOnRoadPrice.btn.btn-orange.btn-xs')
+	el.click()
+
+	try:
+		while True:
+			for city in cities:
+				time.sleep(1)
+				selection = Select(browser.find_element_by_id('drpPqCity'))
+				try:
+					selection.select_by_visible_text(str(city))
+					car_info.append(__get_info())
+				except Exception as e:
+					raise e
+			print('waiting for input')
+			time.sleep(5)
+	except KeyboardInterrupt:
+		print('stopped')
+
+	print(car_info)
+
 
 if __name__ == '__main__':
-	get_car_link_list()
-
-	timestr = time.strftime('%Y-%m-%d_%H:%M:%S')
-	outfile = open('./olx_list@' + timestr + '.csv', 'w')
-	writer = csv.writer(outfile)
-	writer.writerow(['DESCRIPTION', 'LOCATION', 'MANUFACTURER', 'MODEL', 'YEAR', 'FUEL TYPE', 'KMS DRIVEN', 'PRICE'])
-	writer.writerows(full_list)
-
-	print('\nDONE !')
+	__create_list(url1)
+	print('done')
