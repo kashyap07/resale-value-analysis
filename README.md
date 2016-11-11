@@ -6,13 +6,12 @@ This is a PES University Data Analytics course Project to analyse car resale val
 2. ```BeatifulSoup4```
 3. ```threadings```
 4. ```selenium```
-5. 
 
 #### things to be done
 1. ~~scraper to get avg. on-road price~~
 2. scraper to get precise on-road prices
 	TODO:
-	* function to generqate urls of all companies
+	* function to generate urls of all companies
 	* and get back to previous car
 	* csv
 3. ~~scraper to get data from olx.in~~
